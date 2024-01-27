@@ -30,6 +30,15 @@
     max-width: 600px;
     
 }
+
+.hero .content .img{
+    height: 70%;
+    justify-content: left;;
+    width: 70%;
+    margin-top: -110px;
+    margin-bottom: -60px;
+    margin-left: -75px;
+}
 .content h1{
     font-size: 70px;
     color:#85a416;
