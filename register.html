@@ -11,19 +11,19 @@
 <body>
 
 <div class="wraper">
-    <form id = 'new' action= "">
+    <form id = 'new'>
         <image class="img" src="chatjuet.png"></image>
         <h1>Sign Up</h1>
         <div class="input-box">
-        <input class="box" type="text" placeholder="First name" required>
-        <input class="box" type="text" placeholder="Last name">
+        <input id = "fname" class="box" type="text" placeholder="First name" required>
+        <input id = "lname"class="box" type="text" placeholder="Last name">
         </div>
         <div class="input-box">
-            <input type="text" placeholder="Email address" required>
+            <input id ="emailid" type="text" placeholder="Email address" required>
         </div>
         <div class="input1-box">
-            <input  type="password" placeholder="New password" required>
-            <i class='bx bxs-lock-alt' ></i>
+            <input id ="pass" type="password" placeholder="New password" required>
+            <i id = "icon" class='bx bxs-lock-alt' ></i>
         </div>
         <div class="text">
             <p>Date of birth</p>
@@ -40,11 +40,64 @@
             <label for="year"></label>
             <select id="year" name="year"></select>
           </div>
-          <button type="submit" class="button">Sign Up</button>
+          <button type="sub mit" class="button">Sign Up</button>
         </div>                
         
     </form>
 </div>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
+
+const firebaseConfig = {
+apiKey: "AIzaSyBgd4ZVbFe91LkvrROLEq2DAc-DM1DNCvM",
+authDomain: "chatjuet.firebaseapp.com",
+projectId: "chatjuet",
+storageBucket: "chatjuet.appspot.com",
+messagingSenderId: "372432217688",
+appId: "1:372432217688:web:997c7db53f49288be84c2d",
+measurementId: "G-RQGCM18VMM"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase();
+const auth = getAuth(app);
+
+let firstname = document.getElementById('fname');
+let lastname = document.getElementById('lname');
+let email = document.getElementById('emailid');
+let password = document.getElementById('pass');
+
+let MainForm = document.getElementById('new')
+
+let Registeruser = event =>{
+event.preventDefault();
+
+createUserWithEmailAndPassword(auth, email.value, password.value)
+.then((Credentials) =>
+{
+  console.log(Credentials);
+  alert("Successfully registered! You will now be redirected to the login page.");
+   window.location.href = "index.html"; // Redirect to login page
+
+
+})
+.catch((error) => {
+  alert(error.message);
+  console.log(error.code);
+  console.log(error.message);
+})
+}
+
+MainForm.addEventListener('submit',Registeruser);
+</script>
 <script src="register.js"></script>
+
 </body>
 </html>
