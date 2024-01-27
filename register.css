@@ -1,0 +1,153 @@
+/* Add this to your register.css file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wraper {
+    width: 100%;
+    max-width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wraper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wraper .input-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin: 30px 0;
+    height: 50px;
+}
+
+.wraper .input-box .box{
+    width: 100%;
+}
+.wraper .input1-box{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 15px;
+    height: 50px;
+    
+}
+
+.wraper .input1-box .box{
+    width: 100%;
+}
+
+.input1-box input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        border: 2px solid rgba(255, 255, 255, .2);
+        border-radius: 40px;
+        font-size: 16px;
+        color: #fff;
+        padding: 20px 45px 20px 20px;
+        size: 100px;
+    
+}
+.input1-box input::placeholder {
+    color: #fff;
+}
+.input-box input {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    size: 100px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+.input1-box i{
+    position: absolute;
+    right: 55px;
+    bottom: 197px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.text{
+    margin-bottom: 10px;
+}
+#dob-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: flex-end; /* Right-align the content */
+    align-items: center;
+}
+
+#dob-container label {
+    display: none;
+}
+#dob-container select {
+    width: 40%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    
+    font-size: 16px;
+    padding: 10px;
+    
+    outline: none;
+    color: white;
+}
+
+#dob-container select option {
+    color: black; 
+    justify-content: flex-start; /* Right-align the content */
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+    
+}
+
+.button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #333;
+    font-weight: 600;
+}
+
