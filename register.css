@@ -29,6 +29,13 @@ body {
     padding: 30px 40px;
 }
 
+.wraper .img{
+    height: 100%;
+    align-content: center;
+    width: 100%;
+    margin-top: -60px;
+    margin-bottom: -60px;
+}
 .wraper h1 {
     font-size: 36px;
     text-align: center;
