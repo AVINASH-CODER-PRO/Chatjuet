@@ -115,3 +115,11 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+#icon{
+    cursor: pointer;
+}
+
+.button{
+    cursor: pointer;
+}
