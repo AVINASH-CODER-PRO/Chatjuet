@@ -23,7 +23,7 @@ function generateOptions(options) {
       passwordInput.setAttribute('type', type);
   
       // Change lock icon based on password visibility
-      lockIcon.className = type === 'password' ? 'bx bxs-lock-alt' : 'bx bxs-lock-open-alt';
+      lockIcon.className = type === 'password' ? 'bx bxs-show' : 'bx bxs-low-vision';
     });
     // Get current date
     const currentDate = getCurrentDate();
