@@ -82,6 +82,11 @@ event.preventDefault();
 createUserWithEmailAndPassword(auth, email.value, password.value)
 .then((Credentials) =>
 {
+    
+  set(ref(db, 'UsersAuthList/' + Credentials.user.uid),{
+    firstname: firstname.value,
+    lastname: lastname.value
+  })
   console.log(Credentials);
   alert("Successfully registered! You will now be redirected to the login page.");
    window.location.href = "index.html"; // Redirect to login page

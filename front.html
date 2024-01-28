@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="chatjuet.css">
 </head>
 <body>
- <div class="hero"> 
-    <div class="content">
-        <image class="img" src="chatjuet.png"></image>
-        <h1 class="anim"> Chat With<br>Your Friend</h1>
-        <p class="anim">This site provide user to get interect with another user in an organisation</p>
-        <a href="#" class="btn anim">Chat now </a>
-     </div>
-        <div>
-            <img src="juet_trans1.jpg"class="feature-img anim">
+    <div class="hero"> 
+        <div class="content">
+            <image class="img" src="chatjuet.png"></image>
+            <h1 class="anim"> Chat With<br>Your Friend</h1>
+            <p class="anim">This site provide user to get interect with another user in an organisation</p>
+            <a href="search.html" class="btn anim">Chat now </a>
         </div>
- </div>
+        <div>
+            <img src="juet_trans1.jpg" class="feature-img anim">
+        </div>
+    </div>
 
+    <script>
+        let userCreds = JSON.parse(sessionStorage.getItem("users-cred"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-info"));
+    </script>
 </body>
 </html>
