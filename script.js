@@ -7,13 +7,13 @@ function iconfun()
     if(passinput.type == 'password')
     {
             passinput.type = 'text';
-            icon.classList.remove('bx', 'bxs-lock-alt');
-            icon.classList.add('bx', 'bxs-lock-open-alt');
+            icon.classList.remove('bx', 'bxs-show');
+            icon.classList.add('bx', 'bxs-low-vision');
     }
     else
     {
         passinput.type = 'password';
-        icon.classList.remove('bx', 'bxs-lock-open-alt');
-        icon.classList.add('bx', 'bxs-lock-alt');
+        icon.classList.remove('bx', 'bxs-low-vision');
+        icon.classList.add('bx', 'bxs-show');
     }
 }
